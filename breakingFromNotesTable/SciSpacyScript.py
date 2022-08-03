@@ -21,18 +21,20 @@ def tokeniseUsingSciSpacy(sentence):
     cleaned_data=list(item.text for item in doc.sents)
     return cleaned_data
 
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 tqdm().pandas()
 
 
 notesTableDfExploded = Path('notesTableDfExploded.csv')
 notesTableDfExploded = pd.read_csv(notesTableDfExploded)
-notesTableDfExplodedLong = notesTableDfExploded[notesTableDfExploded.postNLTK_tokenCnt>=250]
+notesTableDfExplodedLong = notesTableDfExploded[notesTableDfExploded.postNLTK_tokenCnt>=200].copy()
 
 
 notesTableDfExplodedLong['SciSpaced'] = notesTableDfExplodedLong\
     .nltkCleanned\
     .progress_apply(tokeniseUsingSciSpacy)
+    
+
     
 notesTableDfExplodedLong = notesTableDfExplodedLong.explode('SciSpaced')
 notesTableDfExplodedLong['SciSpacedSentenceIdex'] = notesTableDfExplodedLong\
