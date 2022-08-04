@@ -33,7 +33,7 @@ setuptools.setup(
         "neuroblu_postgres @ git+ssh://git@github.com/Holmusk/neuroblu_postgres.git@v1.0.2#egg=neuroblu_postgres",
         
         "spacy==3.2.4",
-        "https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.0/en_core_sci_scibert-0.5.0.tar.gz",
+        "en_core_sci_scibert @ https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.0/en_core_sci_scibert-0.5.0.tar.gz",
         
         "Tacos @ git+https://github.com/lsmoriginal/Tacos.git",
     ],
