@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="holmusk_sentence_tokenizer",
+    name="NoteToSent",
     version="0.0.1",
     author="ShaoMin Liu",
     author_email="shaomin.liu@holmusk.com",
