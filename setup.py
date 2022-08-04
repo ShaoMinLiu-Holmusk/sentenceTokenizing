@@ -12,7 +12,9 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ShaoMinLiu-Holmusk/sentenceTokenizing",
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages(
+        include=["NoteToSent", "NoteToSent.*"]
+        ),
     package_data={
         '':['*.json', '*.csv', "*.dic", "*.aff"]},
     classifiers=[
